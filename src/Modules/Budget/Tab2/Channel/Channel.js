@@ -2,9 +2,9 @@ import React from "react";
 import { Box, Button } from "@chakra-ui/react";
 import { LuFileSearch } from "react-icons/lu";
 import { Grey100, White } from "../../../../Styles/Colors";
+import { SmallRadius } from "../../../../Styles/Style";
 
 const Channel = ({ channel, handleChannelSelect, selectedChannel }) => {
-
   return (
     <Button
       key={channel.name}
@@ -14,11 +14,7 @@ const Channel = ({ channel, handleChannelSelect, selectedChannel }) => {
       p=".5rem"
       justifyContent="flex-start"
       borderRadius={"0"}
-      bg={
-        selectedChannel?.name === channel.name
-          ? Grey100
-          : "transparent"
-      }
+      bg={selectedChannel?.name === channel.name ? Grey100 : "transparent"}
       _hover={{ bg: Grey100 }}
     >
       <Box
@@ -28,7 +24,7 @@ const Channel = ({ channel, handleChannelSelect, selectedChannel }) => {
         height="2rem"
         bg={"orange"}
         padding=".2rem"
-        borderRadius="5px"
+        borderRadius={SmallRadius}
         mr="1rem"
       >
         <LuFileSearch

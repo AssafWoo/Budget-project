@@ -11,6 +11,7 @@ import {
 import { FiCheck, FiEdit2, FiX } from "react-icons/fi";
 import { Black, MainGreen, MainRed } from "../../../../Styles/Colors";
 import { numberToStringWithCommas } from "../../../../Utils/getFormatNumbers";
+import { SmallRadius } from "../../../../Styles/Style";
 
 const EditableCell = ({
   value,
@@ -66,7 +67,7 @@ const EditableCell = ({
                 size="sm"
                 autoFocus
                 width="4rem"
-                borderRadius="5px"
+                borderRadius={SmallRadius}
               />
             </InputGroup>
             <IconButton

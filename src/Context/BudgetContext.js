@@ -85,11 +85,9 @@ export const BudgetProvider = ({ children }) => {
   },[]);
 
   const handleFormChange = useCallback((channelName, key, value) => {
-    console.log(channelName, key, value)
     setChannels((prevChannels) =>
       prevChannels.map((channel) => {
         if (channel.name === channelName) {
-          console.log(channel)
           return {
             ...channel,
             budget: {

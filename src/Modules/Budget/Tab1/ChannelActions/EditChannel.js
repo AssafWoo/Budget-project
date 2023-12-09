@@ -2,6 +2,7 @@ import { Input, MenuItem, useDisclosure } from "@chakra-ui/react";
 import GenericModal from "../../../../Common/Modal/GenericModal";
 import React, { useState } from "react";
 import { LightBlue, MainBlue } from "../../../../Styles/Colors";
+import { SmallRadius } from "../../../../Styles/Style";
 
 const EditChannel = ({ channel, onUpdate }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -16,10 +17,11 @@ const EditChannel = ({ channel, onUpdate }) => {
     onOpen();
   };
 
+
   return (
     <>
       <MenuItem
-        borderRadius="5px"
+        borderRadius={SmallRadius}
         _hover={{ color: MainBlue, background: LightBlue }}
         onClick={handleEditClick}
       >
@@ -32,7 +34,6 @@ const EditChannel = ({ channel, onUpdate }) => {
         primaryAction={handleSave}
         primaryButtonLabel="Save"
         summary={"Change this channel's name"}
-
       >
         <Input value={newName} onChange={(e) => setNewName(e.target.value)} />
       </GenericModal>

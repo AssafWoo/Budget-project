@@ -2,6 +2,7 @@ import { Input, MenuItem, useDisclosure } from "@chakra-ui/react";
 import GenericModal from "../../../../Common/Modal/GenericModal";
 import { LightRed, MainRed } from "../../../../Styles/Colors";
 import React, { useState } from "react";
+import { SmallRadius } from "../../../../Styles/Style";
 
 const DeleteChannel = ({ channel, onDelete }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -24,7 +25,7 @@ const DeleteChannel = ({ channel, onDelete }) => {
   return (
     <>
       <MenuItem
-        borderRadius="5px"
+        borderRadius={SmallRadius}
         _hover={{ color: MainRed, background: LightRed }}
         onClick={handleDeleteClick}
       >
@@ -39,7 +40,6 @@ const DeleteChannel = ({ channel, onDelete }) => {
         primaryButtonLabel="Delete"
         primaryButtonColor={MainRed}
         primaryButtonColorScheme={"red"}
-
         disableMainButton={disableButton}
         summary={`Enter channel name (${channel.name}) to delete this channel`}
       >

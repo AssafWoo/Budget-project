@@ -43,7 +43,7 @@ const BudgetFrequency = ({ handleFormChange }) => {
         onChange={(e) => handleFormChange("frequency", e.target.value)}
       >
         {frequencyOptions.map((option) => (
-          <option value={option}>{option}</option>
+          <option value={option} key={option}>{option}</option>
         ))}
       </Select>
     </FormControl>

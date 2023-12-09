@@ -5,6 +5,7 @@ import BudgetBaseline from "./SubComponents/BudgetBaseline";
 import BudgetFrequency from "./SubComponents/BudgetFrequency";
 import BudgetBreakdown from "./SubComponents/BudgetBreakdown";
 import { useBudget } from "../../../../Context/BudgetContext";
+import BudgetFormSkeleton from "../../../../Common/Skeletons/BudgetFormSkeleton";
 
 const BudgetForm = ({ channel }) => {
   const {
@@ -45,11 +46,11 @@ const BudgetForm = ({ channel }) => {
   }, [budget, channel.name, updateBudgetAllocation]);
 
   if (!budget) {
-    return <div>Loading...</div>;
+    return <BudgetFormSkeleton />;
   }
 
   return (
-    <Box p={4} >
+    <Box p={4}>
       <HStack spacing={4} width="80%" wrap={"wrap"}>
         <BudgetFrequency
           frequency={budget.frequency}

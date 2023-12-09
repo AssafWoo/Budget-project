@@ -12,6 +12,7 @@ import {
 import { Black, White } from "../../Styles/Colors";
 import BudgetHeader from "../../Modules/Budget/Header/BudgetHeader";
 import AddChannel from "../../Modules/Budget/Tab1/ChannelActions/AddChannel";
+import { MediumRadius } from "../../Styles/Style";
 
 const Tab1 = lazy(() => import("../../Modules/Budget/Tab1/Tab1"));
 const Tab2 = lazy(() => import("../../Modules/Budget/Tab2/Tab2"));
@@ -42,7 +43,7 @@ const Budget = () => {
             Tab 2
           </Tab>
         </TabList>
-        <Suspense fallback={<Skeleton width="100%" height="3rem" borderRadius="10px" mt="1rem" />}>
+        <Suspense fallback={<Skeleton width="100%" height="3rem" borderRadius={MediumRadius} mt="1rem" />}>
           <TabPanels mt="2rem">
             <TabPanel pl="0">
               <Tab1 />

@@ -10,12 +10,12 @@ code {
 
 .chakra-alert[data-status="success"] {
   background: #2FCF5F;
-  border-radius:15px;
+  border-radius:0.625rem;
   text-align: center;
 }
 
 .chakra-alert[data-status="error"] {
   background: #EE2032;
-  border-radius:15px;
+  border-radius:0.625rem;
   text-align: center;
 }

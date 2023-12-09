@@ -5,6 +5,7 @@ import { getMonthsAndYear } from "../../../../../Utils/getMonthsAndYear";
 import { getQuartersOfYear } from "../../../../../Utils/getQuartersOfYear";
 import { stringWithCommasToNumber } from "../../../../../Utils/getFormatNumbers";
 import { CurrencyInput } from "../../../../../Common/Inputs/CurrencyInput";
+import { MediumRadius, SmallGrey300Border } from "../../../../../Styles/Style";
 
 const MonthBudget = ({ label, value, readOnly, onChange }) => {
   return (
@@ -38,8 +39,8 @@ const BudgetBreakdown = ({
       bg={Grey600}
       padding="2rem"
       mt="2rem"
-      borderRadius={"10px"}
-      border={`1px solid ${Grey300}`}
+      borderRadius={MediumRadius}
+      border={SmallGrey300Border}
     >
       <Text fontSize="lg" fontWeight={900} mb={4} color={Navy600}>
         Budget Breakdown

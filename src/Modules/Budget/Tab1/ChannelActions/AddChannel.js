@@ -1,8 +1,9 @@
 import { Button, Input, useDisclosure } from "@chakra-ui/react";
 import React, { useState } from "react";
 import GenericModal from "../../../../Common/Modal/GenericModal";
-import { Grey300, Grey500 } from "../../../../Styles/Colors";
+import { Grey500 } from "../../../../Styles/Colors";
 import { useBudget } from "../../../../Context/BudgetContext";
+import { SmallGrey300Border } from "../../../../Styles/Style";
 
 const Channel = () => {
   const { handleAddChannel } = useBudget();
@@ -21,7 +22,7 @@ const Channel = () => {
         color={Grey500}
         fontSize={{ base: ".8rem", md: ".9rem" }}
         alignSelf="start"
-        border={`1px solid ${Grey300}`}
+        border={SmallGrey300Border}
         onClick={onOpen}
       >
         + Add Channel

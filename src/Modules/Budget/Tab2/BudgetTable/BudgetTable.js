@@ -5,7 +5,12 @@ import { getMonthsAndYear } from "../../../../Utils/getMonthsAndYear";
 import { Grey700 } from "../../../../Styles/Colors";
 import EditableCell from "./EditableCell";
 
-const BudgetTable = ({ handleValueChange, data, editingIndex, setEditingIndex }) => {
+const BudgetTable = ({
+  handleValueChange,
+  data,
+  editingIndex,
+  setEditingIndex,
+}) => {
   const headers = useMemo(() => getMonthsAndYear(), []);
   const scrollContainerRef = useRef();
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -30,7 +35,6 @@ const BudgetTable = ({ handleValueChange, data, editingIndex, setEditingIndex })
       scrollContainer.removeEventListener("scroll", checkScroll);
     };
   }, []);
-  
 
   const scrollTable = (direction) => {
     if (scrollContainerRef.current) {

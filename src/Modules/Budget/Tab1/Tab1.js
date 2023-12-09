@@ -10,15 +10,21 @@ import {
   MenuButton,
   Menu,
   IconButton,
+  Text,
 } from "@chakra-ui/react";
 import { IoIosMore } from "react-icons/io";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { LuFileSearch } from "react-icons/lu";
-import { Grey100, Grey200, Grey300, White } from "../../../Styles/Colors";
+import { Grey100, Grey300, White } from "../../../Styles/Colors";
 import DeleteChannel from "./ChannelActions/DeleteChannel";
 import EditChannel from "./ChannelActions/EditChannel";
 import BudgetForm from "./BudgetForm/BudgetForm";
 import { useBudget } from "../../../Context/BudgetContext";
+import {
+  MediumRadius,
+  SmallGrey300Border,
+  SmallRadius,
+} from "../../../Styles/Style";
 
 function CustomAccordionIcon({ isOpen }) {
   return (
@@ -41,11 +47,11 @@ const Tab1 = () => {
         <AccordionItem
           key={index}
           bg={Grey100}
-          border={`1px solid ${Grey200}`}
-          borderRadius={"10px"}
+          border={SmallGrey300Border}
+          borderRadius={MediumRadius}
           mb=".5rem"
         >
-          <h2>
+          <Text as="h2">
             <AccordionButton onClick={onToggle} _focus={{ boxShadow: "none" }}>
               <CustomAccordionIcon isOpen={isOpen} />
               <Box
@@ -62,7 +68,7 @@ const Tab1 = () => {
                   height="2rem"
                   bg={"orange"}
                   padding=".2rem"
-                  borderRadius="5px"
+                  borderRadius={SmallRadius}
                   mr="1rem"
                 >
                   <LuFileSearch
@@ -86,7 +92,7 @@ const Tab1 = () => {
                   icon={<IoIosMore size="1.2rem" color={Grey300} />}
                   onClick={(e) => e.stopPropagation()}
                 />
-                <MenuList padding=".5rem" borderRadius="10px">
+                <MenuList padding=".5rem" borderRadius={MediumRadius}>
                   <EditChannel
                     channel={channel}
                     onUpdate={handleUpdateChannel}
@@ -98,7 +104,7 @@ const Tab1 = () => {
                 </MenuList>
               </Menu>
             </AccordionButton>
-          </h2>
+          </Text>
           <AccordionPanel pb={4} bg={White}>
             <BudgetForm channel={channel} />
           </AccordionPanel>

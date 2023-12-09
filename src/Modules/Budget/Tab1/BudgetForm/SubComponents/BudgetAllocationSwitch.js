@@ -13,6 +13,7 @@ import { Grey300, Grey600 } from "../../../../../Styles/Colors";
 import RadioCard from "../../../../../Common/Inputs/RadioCard";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { iconStyle } from "./Style";
+import { MediumGrey300Border, SmallRadius } from "../../../../../Styles/Style";
 
 export const allocationOptions = ["Equal", "Manual"];
 
@@ -46,13 +47,13 @@ const BudgetAllocationSwitch = ({ budgetAllocation, handleFormChange }) => {
         </Tooltip>
       </FormLabel>
       <Flex
-        border={`2px solid ${Grey300}`}
+        border={MediumGrey300Border}
         boxShadow={"md"}
         width="fit-content"
         align="center"
-        borderRadius={"5px"}
+        borderRadius={SmallRadius}
       >
-        <ButtonGroup isAttached {...group} bg={Grey600} borderRadius={"5px"}>
+        <ButtonGroup isAttached {...group} bg={Grey600} borderRadius={SmallRadius}>
           {allocationOptions.map((value, index) => {
             const radio = getRadioProps({ value });
             return (

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Grey200 } from "./Colors";
+import { Grey200, Grey300 } from "./Colors";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -17,10 +17,14 @@ export const InnerWrapper = styled.div`
   width: 100%;
 
   .chakra-collapse {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-top:1px solid ${Grey200}
+    border-bottom-left-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+    border-top:0.063rem solid ${Grey200}
   }
-
-
 `;
+
+export const SmallRadius = "0.313rem";
+export const MediumRadius = "0.625rem";
+
+export const SmallGrey300Border = `0.063rem solid ${Grey300}`;
+export const MediumGrey300Border = `0.125rem solid ${Grey300}`;

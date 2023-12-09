@@ -1,6 +1,7 @@
 import { Box, useRadio } from "@chakra-ui/react";
 import React from "react";
 import { Indigo500, Grey300, Grey500, Grey600, White } from "../../Styles/Colors";
+import { MediumGrey300Border, SmallRadius } from "../../Styles/Style";
 
 const RadioCard = (props) => {
     const { getInputProps, getCheckboxProps } = useRadio(props);
@@ -9,8 +10,8 @@ const RadioCard = (props) => {
   
     const checkedBorderStyle = props.isChecked
       ? props.isLast
-        ? { borderLeft: `2px solid ${Grey300}` }
-        : { borderRight: `2px solid ${Grey300}` }
+        ? { borderLeft: MediumGrey300Border }
+        : { borderRight: MediumGrey300Border }
       : {};
   
     return (
@@ -21,14 +22,14 @@ const RadioCard = (props) => {
           cursor="pointer"
           color={Grey500}
           bg={Grey600}
-          borderRadius="5px"
+          borderRadius={SmallRadius}
           fontWeight="600"
           _checked={{
             fontWeight:600,
             bg: White,
             color: Indigo500,
             borderColor: Grey300,
-            borderRadius: "5px",
+            borderRadius: {SmallRadius},
             ...checkedBorderStyle,
           }}
           _focus={{

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
-
 import { useBudget } from "../../../Context/BudgetContext";
 import { Grey700 } from "../../../Styles/Colors";
 import { stringWithCommasToNumber } from "../../../Utils/getFormatNumbers";
@@ -70,7 +69,8 @@ const Tab2 = () => {
           top: 0,
           bottom: 0,
           width: "5rem",
-          backgroundImage: "linear-gradient(to left, rgba(169,181,210,.1), rgba(112,126,167,0))",
+          backgroundImage:
+            "linear-gradient(to left, rgba(169,181,210,.1), rgba(112,126,167,0))",
         }}
       >
         <Text mb="1rem" mt=".5rem" color={Grey700} fontWeight={"900"}>
@@ -79,6 +79,7 @@ const Tab2 = () => {
         {channels &&
           channels.map((channel) => (
             <Channel
+              key={channel}
               channel={channel}
               handleChannelSelect={handleChannelSelect}
               selectedChannel={selectedChannel}
