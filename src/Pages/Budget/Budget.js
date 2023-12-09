@@ -13,8 +13,8 @@ import { Black, White } from "../../Styles/Colors";
 import BudgetHeader from "../../Modules/Budget/Header/BudgetHeader";
 import AddChannel from "../../Modules/Budget/Tab1/ChannelActions/AddChannel";
 import { MediumRadius } from "../../Styles/Style";
+import Tab1 from '../../Modules/Budget/Tab1/Tab1';
 
-const Tab1 = lazy(() => import("../../Modules/Budget/Tab1/Tab1"));
 const Tab2 = lazy(() => import("../../Modules/Budget/Tab2/Tab2"));
 
 const Budget = () => {
@@ -26,7 +26,7 @@ const Budget = () => {
           align="flex-end"
           justify="space-between"
           wrap="wrap"
-          padding="1rem"
+          padding="0"
         >
           <BudgetHeader />
           <Box mt={{ base: "1rem", md: "0" }}>

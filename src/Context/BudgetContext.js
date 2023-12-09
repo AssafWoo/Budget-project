@@ -1,12 +1,11 @@
 import React, { createContext, useState, useContext, useCallback, useMemo } from "react";
-import { useCustomToast } from "../Utils/Hooks/useCustomToast";
-import { frequencyOptions } from "../Modules/Budget/Tab1/BudgetForm/SubComponents/BudgetFrequency";
-import { allocationOptions } from "../Modules/Budget/Tab1/BudgetForm/SubComponents/BudgetAllocationSwitch";
+import { useCustomToast } from "../Hooks/useCustomToast";
+import { sumArray } from "../Utils/getArraySum";
+import { allocationOptions, frequencyOptions } from "../Constants/SelectOptions";
 
 const BudgetContext = createContext();
 
 export const useBudget = () => useContext(BudgetContext);
-
 
 export const BudgetProvider = ({ children }) => {
   const [channels, setChannels] = useState([
@@ -60,8 +59,6 @@ export const BudgetProvider = ({ children }) => {
     );
   },[showToast]);
 
-
-  const sumArray = (arr) => arr.reduce((a, b) => a + b, 0);
 
   const handleBudgetChange = useCallback((channelName, index, value, type) => {
     setChannels((prevChannels) =>

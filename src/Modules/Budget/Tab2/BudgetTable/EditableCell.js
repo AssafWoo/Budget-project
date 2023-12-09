@@ -21,7 +21,6 @@ const EditableCell = ({
   onEditClick,
 }) => {
   const [inputValue, setInputValue] = useState(value);
-  const [hovering, setHovering] = useState(false);
 
   useEffect(() => {
     if (!isEditing) {
@@ -43,10 +42,16 @@ const EditableCell = ({
 
   return (
     <Td
-      onMouseEnter={() => setHovering(true)}
-      onMouseLeave={() => setHovering(false)}
+      _hover={{
+        ".edit-pencil-icon": {
+          display: "flex"
+        }
+      }}
     >
-      <Flex align="center">
+      <Flex
+        align="center"
+        position="relative"
+      >
         {isEditing ? (
           <>
             <InputGroup>
@@ -97,12 +102,18 @@ const EditableCell = ({
             ${numberToStringWithCommas(value)}
           </Text>
         )}
-        {hovering && !isEditing && (
+        {!isEditing && (
           <IconButton
             icon={<FiEdit2 />}
             size="xs"
             color={Black}
             bg="transparent"
+            position="absolute"
+            alignItems="center"
+            justifyContent="center"
+            right="-75%"
+            display="none"
+            className="edit-pencil-icon"
             borderRadius="50%"
             aria-label="Cancel"
             onClick={handleEdit}

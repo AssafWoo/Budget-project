@@ -11,7 +11,7 @@ const BudgetTable = ({
   editingIndex,
   setEditingIndex,
 }) => {
-  const headers = useMemo(() => getMonthsAndYear(), []);
+  const headers = getMonthsAndYear()
   const scrollContainerRef = useRef();
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);

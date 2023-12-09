@@ -6,13 +6,13 @@ import { BudgetProvider } from "./Context/BudgetContext";
 function App() {
   return (
     <ChakraProvider>
-      <Wrapper>
-        <InnerWrapper>
-          <BudgetProvider>
+      <BudgetProvider>
+        <Wrapper>
+          <InnerWrapper>
             <Budget />
-          </BudgetProvider>
-        </InnerWrapper>
-      </Wrapper>
+          </InnerWrapper>
+        </Wrapper>
+      </BudgetProvider>
     </ChakraProvider>
   );
 }
