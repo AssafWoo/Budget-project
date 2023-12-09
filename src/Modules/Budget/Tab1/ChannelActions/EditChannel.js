@@ -33,7 +33,7 @@ const EditChannel = ({ channel, onUpdate }) => {
         title="Edit channel"
         primaryAction={handleSave}
         primaryButtonLabel="Save"
-        summary={"Change this channel's name"}
+        summary={"Rename this channel"}
       >
         <Input value={newName} onChange={(e) => setNewName(e.target.value)} />
       </GenericModal>

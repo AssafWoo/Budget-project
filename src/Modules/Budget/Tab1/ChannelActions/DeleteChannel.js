@@ -41,7 +41,7 @@ const DeleteChannel = ({ channel, onDelete }) => {
         primaryButtonColor={MainRed}
         primaryButtonColorScheme={"red"}
         disableMainButton={disableButton}
-        summary={`Enter channel name (${channel.name}) to delete this channel`}
+        summary={`To delete this channel, please enter the channel name (${channel.name})`}
       >
         <Input onChange={(e) => handleValidation(e.target.value)} />
       </GenericModal>

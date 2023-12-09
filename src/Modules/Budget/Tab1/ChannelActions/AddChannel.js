@@ -33,10 +33,10 @@ const Channel = () => {
         title="Add New Channel"
         primaryAction={handleAdd}
         primaryButtonLabel="Add"
-        summary={"Add a new Channel and set it's name"}
+        summary={"Create a new channel and assign a name to it"}
       >
         <Input
-          placeholder="Enter Channel name"
+          placeholder="Enter channel name"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
